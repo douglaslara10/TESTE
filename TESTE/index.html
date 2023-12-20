@@ -15,46 +15,50 @@
             <h1>Quizz de Programação</h1>
         </header>
         <main>
-            <!-- CADASTRO FORMULÁRIO -->
-            <div id="cadastro-container">
-                <h2>Cadastro</h2>
-                <form id="cadastroForm">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" required>
-                    
-                    <label for="sobrenome">Sobrenome:</label>
-                    <input type="text" id="sobrenome" required>
-                    
-                    <label for="matricula">Matrícula:</label>
-                    <input type="text" id="matricula" required>
-                    
-                    <button type="button" onclick="cadastrar()">Cadastrar</button>
-                </form>
-            </div>
+            <!-- CADASTRO E QUIZZ CONTAINER -->
+            <div id="cadastro-quizz-container">
+                <!-- CADASTRO FORMULÁRIO -->
+                <div id="cadastro-container">
+                    <form id="cadastroForm">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" required>
 
-            <!-- QUIZZ CONTAINER -->
-            <div id="quizz-container" class="hide">
-                <p id="question">
-                    <span id="question-number">1</span> &#8212;
-                    <span id="question-text">Qual é a unidade de medida para metros?</span>
-                </p>
-                <div id="answers-box">
-                    <button><span class="btn-letter"></span> <span class="question-answer"></span></button>
-                    <button><span class="btn-letter"></span> <span class="question-answer"></span></button>
-                    <button><span class="btn-letter"></span> <span class="question-answer"></span></button>
-                    <button><span class="btn-letter"></span> <span class="question-answer"></span></button>
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" id="sobrenome" required>
+
+                        <label for="matricula">Matrícula:</label>
+                        <input type="text" id="matricula" required>
+
+                        <button type="submit">Cadastrar</button>
+                    </form>
+                </div>
+
+                <!-- QUIZZ CONTAINER -->
+                <div id="quizz-container" class="hide">
+                    <!-- Adicione o conteúdo do quizz aqui -->
+                    <p id="question">
+                        <span id="question-number">1</span> &#8212;
+                        <span id="question-text">Qual é a unidade de medida para metros?</span>
+                    </p>
+                    <div id="answers-box">
+                        <button><span class="btn-letter"></span> <span class="question-answer"></span></button>
+                        <button><span class="btn-letter"></span> <span class="question-answer"></span></button>
+                        <button><span class="btn-letter"></span> <span class="question-answer"></span></button>
+                        <button><span class="btn-letter"></span> <span class="question-answer"></span></button>
+                    </div>
                 </div>
             </div>
 
             <!-- SCORE BOARD -->
             <div id="score-container" class="hide">
+                <!-- Adicione o conteúdo do placar aqui -->
                 <h2>Parabéns</h2>
                 <p id="display-score"><span>90</span>%</p>
                 <p>
                     Você acertou <span id="correct-answers">0</span> de
                     <span id="questions-qty">10</span> perguntas
                 </p>
-                <button id="restart" onclick="reiniciarQuizz()">Refazer quizz!</button>
+                <button id="restart">Refazer quizz!</button>
             </div>
 
             <!-- TEMPLATE RESPOSTA -->
